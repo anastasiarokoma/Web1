@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+
+html, body{
+    background: white;
+    font-family: 'Fira Code', monospace;
+
+    width: 100vw;
+    height: 100vh;
+
+    padding: 0;
+    border: 0;
+    margin:0;
+}
+
+.header{
+    background: #ABDF75;
+
+    width: 100vw;
+    height: 100px;
+
+    margin:0;
+    padding: 0;
+    border: 0;
+
+    display: flex;
+
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo{
+    font-family: 'Fira Code', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+
+    padding: 0px 30px 0px 30px;
+}
+
+.headerLink{
+    margin: 0;
+}
+
+.headerList{
+    list-style: none;
+    font-size: 150%;
+    
+    width: 25%;
+    padding: 0px 30px 0px 30px;
+    margin: 0;
+    border: 0;
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+    
+    margin: 0;
+}
+
+a:hover{
+    color:#2F6690;
+}
+
+#buttons{
+    display: flex;
+
+}
+
+
+.button{
+    background-color: #ABDF75;
+
+    text-align: center;
+    font-size: 35px;
+
+    box-shadow: 5px 5px 5px 2px #152108;
+
+    width: 250px;
+    height: 80px;
+
+    padding: auto;
+    margin: 0px 10px 0px 10px;
+
+    border-radius: 100px;
+    border-color: #152108;
+    border-width: 4px;
+}
+
+.button:hover{
+    background-color: #9BD85A;
+    transform: translatex(2px) translateY(2px);
+    
+    box-shadow: 3px 3px 5px 1px #152108;
+}
+
+.button:active{
+    background-color: #9BD85A;
+    transform: translatex(5px) translateY(5px);
+    
+    box-shadow: 0px 0px 0px 0px #152108;
+}
+
+.hero{
+    background: #D6F9DD;
+    
+    width: 100%;
+    height: 550px;
+    
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome{
+    font-weight: 400;
+    font-size: 55px;
+
+    margin: 20px 0px 5px 0px;
+}
+
+.questify{
+    font-weight: 700;
+    font-size: 80px;
+
+    margin: 5px 0px 20px 0px
+}
+
+.intro{
+    background: white;
+
+    height: 100px;
+
+    margin: 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#aboutBox{
+    background-color: #E8AEB7;
+
+    text-align: center;
+    font-weight: 500;
+
+    height: 10vh;
+    width: 80vw;
+
+    margin: 0px 10px 20px 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.enterInfo{
+    background-color: #D6F9DD;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.title{
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 300px;
+}
+
+.label{
+    font-size: 25px;
+}
+
+.tfield{
+    box-sizing: border-box;
+    width: 350px;
+    height: 35px;
+
+    background: #D9D9D9;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    margin-bottom: 35px;
+}
+
+.submit{
+    background-color: #ABDF75;
+
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+
+    box-shadow: 3px 3px 5px 2px #20090C;
+
+    width: 200px;
+    height: 50px;
+
+    padding: auto;
+    margin: 0px 10px 0px 10px;
+
+    border-radius: 10px;
+    border-color: #20090C;
+    border-width: 2px;
+}
+
+.submit:hover{
+    background-color: #9BD85A;
+    transform: translatex(1px) translateY(1px);
+    
+    box-shadow: 2px 2px 5px 1px #20090C;
+}
+
+.submit:active{
+    background-color: #9BD85A;
+    transform: translatex(3px) translateY(3px);
+    
+    box-shadow: 0px 0px 0px 0px #20090C;
+}
+
+
+.forgot{
+    background-color: #E8AEB7;
+
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+
+    box-shadow: 3px 3px 5px 2px #20090C;
+
+    width: 200px;
+    height: 30px;
+
+    padding: auto;
+    margin: 20px 10px 0px 10px;
+
+    border-radius: 10px;
+    border-color: #20090C;
+    border-width: 2px;
+}
+
+.forgot:hover{
+    background-color: #E4A0AA;
+    transform: translatex(1px) translateY(1px);
+    
+    box-shadow: 2px 2px 5px 1px #20090C;
+}
+
+.forgot:active{
+    background-color: #E4A0AA;
+    transform: translatex(3px) translateY(3px);
+    
+    box-shadow: 0px 0px 0px 0px #20090C;
+}
+
+.SignUpForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 450px;
+}
+
+.goalList{
+    background-color: #D6F9DD;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; 
+}
+
+.gTitle{
+    font-weight: 400;
+    font-size: 40px;
+}
+
+#goalGrid{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+    align-items: center;
+
+    width: 90%;
+    height: 55%;
+    
+}
+
+.goal{
+    background-color: #C5D6D8;
+
+    margin: 20px;
+
+    width: 80%;
+    height: 90%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: wrap;
+    align-items: center;
+    overflow-wrap: break-word;
+}
+
+.goalT{
+    margin: 0;
+}
+
+.goalD{
+    margin: 0;
+}
+
+#newGoal{
+    background-color: #ABDF75;
+    align-self: center;
+
+    text-align: center;
+    font-size: 35px;
+
+    box-shadow: 5px 5px 5px 2px #152108;
+
+    width: 80px;
+    height: 80px;
+
+    padding: 0px 25px 0px 26px;
+    margin: 50px;
+
+    border-radius: 100px;
+    border-color: #152108;
+    border-width: 4px;
+
+    transition: 0.5s;
+}
+
+#newGoal:hover{
+    width: 250px;
+}
+
+#newGoal:active{
+    background-color: #9BD85A;
+    transform: translatex(5px) translateY(5px);
+    
+    box-shadow: 0px 0px 0px 0px #152108;
+
+    transition: 0s;
+}
+
+.goalD{
+    width: 80%;
+    text-align: center;
+}
+
+.headerG{
+    background: #ABDF75;
+
+    width: 100vw;
+    height: 100px;
+
+    margin:0;
+    padding: 0;
+    border: 0;
+
+    display: flex;
+
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
