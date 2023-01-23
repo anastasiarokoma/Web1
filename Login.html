@@ -13,22 +13,28 @@
         <h1 class="logo">Questify</h1>
         <ul class="headerList">
             <li class="headerLink"><a href="index.html">MAIN</a></li>
-            <li class="headerLink"><a href="£">LOGIN</a></li>
+            <li class="headerLink"><a href="#">LOGIN</a></li>
             <li class="headerLink"><a href="SignUp.html">SIGN UP</a></li>
         </ul>
     </div>
     <div class="enterInfo">
         <h1 class="title">Login</h1>
-        <form class="loginForm" method="post" action="Goals.html">
+        <form class="loginForm" onsubmit="return false;">
             <label class="label" for="username">Username:</label>
-            <input type="text" class="tfield" name="username">
+            <input id="loginU" type="text" class="tfield" name="username"/>
             <label class="label" for="password">Password:</label>
-            <input type="text" class="tfield" name="password">
-            <input type = submit class="submit" value="subbyHubbyUwU">
+            <input type="text" class="tfield" name="password"/>
+            <input type ="submit" class="submit" value="Submit" onclick="test()"/>
         </form>
         <a href="#"><button class="forgot">Forgot your password?</button></a>
     </div>
 
+
+    <script>
+        function test() {
+            alert("unavailable");
+        }
+    </script>
     
 </body>
 </html>
