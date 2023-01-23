@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login: Questify</title>
+    <title>Sign Up: Questify</title>
     <link rel="stylesheet" href="QuestifyLand.css">
-
 </head>
+
 <body>
     <div class="header">
         <h1 class="logo">Questify</h1>
@@ -17,17 +18,119 @@
             <li class="headerLink"><a href="#">SIGN UP</a></li>
         </ul>
     </div>
-    <div class="enterInfo">
+    <div class="enterSignupInfo">
         <h1 class="title">Sign Up</h1>
-        <form class="SignUpForm" method="post" action="Goals.html">
-            <label class="label" for="username">Username:</label>
-            <input type="text" class="tfield" name="username">
-            <label class="label" for="password">Password:</label>
-            <input type="text" class="tfield" name="password">
-            <label class="label" for="Email">Email:</label>
-            <input type="text" class="tfield" name="Email">
-            <input type = submit class="submit" value="subbyHubbyUwU">
+        <form class="SignUpForm">
+
+            <!-- userID -->
+            <div class="question">
+
+                <label class="label" for="username">Username:</label>
+                <input id="signUsername" type="text" class="tfield" name="username">
+                <label id="userMes" class="labelMes" for="username"></label>
+
+            </div>
+
+            <!-- password -->
+            <div class="question">
+
+                <label class="label" for="password">Password:</label>
+                <input id="signPassword" type="text" class="tfield" name="password">
+                <label id="passMes" class="labelMes" for="username"></label>
+
+            </div>
+
+            <!-- Name -->
+            <div class="question">
+
+                <label class="label" for="name">Name:</label>
+                <input id="signName" type="text" class="tfield" name="name">
+                <label id="nameMes" class="labelMes" for="username"></label>
+
+            </div>
+
+            <!-- Adress -->
+            <div class="question">
+
+                <label class="label" for="adress">Adress:</label>
+                <input id="signAdress" type="text" class="tfield" name="adress">
+                <label id="adMes" class="labelMes" for="username"></label>
+
+            </div>
+
+            <!-- country -->
+            <div class="question">
+
+                <label class="label" for="country">Country:</label>
+                <select id="signCountry" class="tfield" name="country">
+                    <option value=""></option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="Mordor">Mordor</option>
+                </select>
+                <label id="countryMes" class="labelMes" for="username"></label>
+
+            </div>
+
+            <!-- Zip -->
+            <div class="question">
+
+                <label class="label" for="zip">Zip code:</label>
+                <input id="signZip" type="text" class="tfield" name="zip">
+                <label id="zipMes" class="labelMes" for="username"></label>
+
+            </div>
+
+            <!-- Email -->
+            <div class="question">
+
+                <label class="label" for="Email">Email:</label>
+                <input id="signEmail" type="text" class="tfield" name="Email">
+                <label id="emailMes" class="labelMes" for="username"></label>
+
+            </div>
+
+            <!-- sex -->
+            <div class="question">
+
+                <label class="label" for="sex">Sex:</label>
+                <input id="signSex" type="text" class="tfield" name="sex">
+                <label id="sexMes" class="labelMes" for="username"></label>
+
+            </div>
+
+            <!-- Language -->
+            <div class="question">
+
+                <label class="label" for="country">Language:</label>
+                <select id="signLanguage" type="text" class="tfield" name="language">
+                    <option value=""></option>
+                    <option value="Dutch">Dutch</option>
+                    <option value="English">English</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Quenya">Quenya</option>
+                </select>
+                <label id="languageMes" class="labelMes" for="username"></label>
+
+            </div>
+
+            <!-- about -->
+            <div class="question">
+
+                <label class="label" for="about">About:</label>
+                <input id="signAbout" type="text" class="tfield" name="about">
+                <label id="aboutMes" class="labelMes" for="username"></label>
+
+            </div>
+            
         </form>
+        <!-- submit -->
+        <button class="submit" onclick="check()">Submit</button>
     </div>
 </body>
+
+<script src="Signup.js"></script>
+
 </html>
