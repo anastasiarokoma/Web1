@@ -40,7 +40,8 @@ function check() {
         checkEmail() &
         checkSex() &
         checkLanguage() &
-        checkAbout()) {
+        checkAbout()
+    ) {
 
 
 
@@ -68,17 +69,67 @@ function checkID() {
         ID.style.borderWidth = "2px";
         return false;
     }
-    // if(ID.value.charAt(0).toUpperCase() != ID.charAt(0)){
-    //     re1 = "The first letter has to be capital!";
-    //     IDMes.innerHTML = re1;
-    //     return;
+
+    var matches = 0;
+
+
+    //uppercase
+    var ul = "QWERTYUIOPASDFGHJKLZXCVBNM";
+
+    for (let j = 0; j < ul.length; j++) {
+        if (ID.value.charAt(0) == ul.charAt(j)) {
+            matches = 1;
+            break;
+        }
+    }
+
+
+
+    if (matches == 0) {
+        var re1 = "Username must start with an uppercase letter";
+        IDMes.innerHTML = re1;
+        IDMes.style.color = "#D7263D";
+        ID.style.borderColor = "#D7263D";
+        ID.style.borderWidth = "2px";
+        return false;
+    }
+
+    // for(let i=0;i<ID.value.length;i++){
+    //     for(let j=0;j<nns.length;j++){
+    //         if(ID.value.charAt(i) == nns.charAt(j)){
+    //             matches = 0;
+    //             break;
+    //         }
+    //     }
     // }
-    // var nns =  "123456789\.[]{}()<>*+-=!?^$|";
-    // if(!ID.value.charAt(ID.length - 1).match(nns)){
-    //     re1 = "The last character has to be a number or a special character!";
+
+    // if (matches == 1) {
+    //     var re1 = "MUST CONTAION A DICK AND BALLS";
     //     IDMes.innerHTML = re1;
-    //     return;
+    //     IDMes.style.color = "#D7263D";
+    //     ID.style.borderColor = "#D7263D";
+    //     ID.style.borderWidth = "2px";
+    //     return false;
     // }
+
+    var nns = "1234567890~!@#$%^&*()_+`-=[]\\{}|;':\",./<>?";
+
+    for (let j = 0; j < nns.length; j++) {
+        if (ID.value.charAt(ID.value.length - 1) == nns.charAt(j)) {
+            matches = 0;
+            break;
+        }
+    }
+
+    if (matches == 1) {
+        var re1 = "Must end in a special character OR number";
+        IDMes.innerHTML = re1;
+        IDMes.style.color = "#D7263D";
+        ID.style.borderColor = "#D7263D";
+        ID.style.borderWidth = "2px";
+        return false;
+    }
+
     var re1 = "Good!";
     IDMes.innerHTML = re1;
     IDMes.style.color = "#436436";
@@ -87,32 +138,9 @@ function checkID() {
     return true;
 }
 
-// Password check
+//Password check
 function checkPass() {
-    // var ul = "QWERTYUIOPASDFGHJKLZXCVBNM";
-    // if(!pass.match(ul)){
-    //     re2 = "The password needs to also contain uppercase letters!";
-    //     passMes.innerHTML = re2;
-    //     return;
-    // }
-    // var ll = "qwertyuiopasdfghjklzxcvbnm";
-    // if(!pass.match(ll)){
-    //     re2 = "The password needs to also contain lowercase letters!";
-    //     passMes.innerHTML = re2;
-    //     return;
-    // }
-    // var sp = "\.[]{}()<>*+-=!?^$|";
-    // if(!pass.match(sp)){
-    //     re2 = "The password needs to also contain special characters!";
-    //     passMes.innerHTML = re2;
-    //     return;
-    // }
-    // var num = "123456789"
-    // if(!pass.match(num)){
-    //     re2 = "The password needs to also contain numbers!";
-    //     passMes.innerHTML = re2;
-    //     return;
-    // }
+
     if (pass.value.length < 12) {
         var re2 = "The ID needs to have length of at least 12 characters!";
         passMes.innerHTML = re2;
@@ -121,6 +149,91 @@ function checkPass() {
         pass.style.borderWidth = "2px";
         return false;
     }
+
+    var ul = "QWERTYUIOPASDFGHJKLZXCVBNM";
+    var matches = 0;
+    for (let i = 0; i < pass.value.length; i++) {
+        for (let j = 0; j < ul.length; j++) {
+            if (pass.value.charAt(i) == ul.charAt(j)) {
+                matches = 1;
+                break;
+            }
+        }
+    }
+
+
+    if (matches == 0) {
+        var re2 = "Password must contain an uppercase letter";
+        passMes.innerHTML = re2;
+        passMes.style.color = "#D7263D";
+        pass.style.borderColor = "#D7263D";
+        pass.style.borderWidth = "2px";
+        return false;
+    }
+
+    var ll = "qwertyuiopasdfghjklzxcvbnm";
+    for (let i = 0; i < pass.value.length; i++) {
+        for (let j = 0; j < ll.length; j++) {
+            if (pass.value.charAt(0) == ll.charAt(j)) {
+                matches = 0;
+                break;
+            }
+        }
+    }
+
+
+    if (matches == 1) {
+        var re2 = "Password must contain a lowercase letter";
+        passMes.innerHTML = re2;
+        passMes.style.color = "#D7263D";
+        pass.style.borderColor = "#D7263D";
+        pass.style.borderWidth = "2px";
+        return false;
+    }
+
+    var sp = "1234567890~!@#$%^&*()_+`-=[]\\{}|;':\"";
+    for (let i = 0; i < pass.value.length; i++) {
+        for (let j = 0; j < sp.length; j++) {
+            if (pass.value.charAt(i) == sp.charAt(j)) {
+                matches = 1;
+                break;
+            }
+        }
+    }
+
+
+    if (matches == 0) {
+        var re2 = "Password must contain a special character";
+        passMes.innerHTML = re2;
+        passMes.style.color = "#D7263D";
+        pass.style.borderColor = "#D7263D";
+        pass.style.borderWidth = "2px";
+        return false;
+    }
+
+
+
+    var num = "123456789"
+    for (let i = 0; i < pass.value.length; i++) {
+        for (let j = 0; j < num.length; j++) {
+            if (pass.value.charAt(i) == num.charAt(j)) {
+                matches = 0;
+                break;
+            }
+        }
+    }
+
+
+    if (matches == 1) {
+        var re2 = "Password must contain a number";
+        passMes.innerHTML = re2;
+        passMes.style.color = "#D7263D";
+        pass.style.borderColor = "#D7263D";
+        pass.style.borderWidth = "2px";
+        return false;
+    }
+
+
     if (pass.value.length < 14) {
         var re2 = "at least 14 characters recommended";
         passMes.innerHTML = re2;
@@ -129,6 +242,7 @@ function checkPass() {
         pass.style.borderWidth = "2px";
         return true;
     }
+
     var re2 = "Good!";
     passMes.innerHTML = re2;
     passMes.style.color = "#436436";
@@ -139,15 +253,6 @@ function checkPass() {
 
 // Name check
 function checkName() {
-    // var letters = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm";
-    // for(let i = 0; i< name.length; i++){
-    //     if(!name.charAt(i).match(letters)){
-    //         re3 = "The name must only contain alphabet characters!";
-    //         alert(re3);
-    //         return;
-    //     }
-    // }
-
     if (name.value == "") {
         var re3 = "Required";
         nameMes.innerHTML = re3;
@@ -156,6 +261,30 @@ function checkName() {
         name.style.borderWidth = "2px";
         return false;
     }
+
+    var ul = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm";
+    var check = 0;
+    for (let i = 0; i < name.value.length; i++) {
+        for (let j = 0; j < ul.length; j++) {
+            if (name.value.charAt(i) == ul.charAt(j)) {
+                check = 1;
+                break;
+            } else {
+                check = 0;
+
+            }
+
+        }
+        if (check == 0) {
+            var re2 = "Name must contain only letters";
+            nameMes.innerHTML = re2;
+            nameMes.style.color = "#D7263D";
+            name.style.borderColor = "#D7263D";
+            name.style.borderWidth = "2px";
+            return false;
+        }
+    }
+
     var re3 = "Good!";
     nameMes.innerHTML = re3;
     nameMes.style.color = "#436436";
@@ -200,21 +329,49 @@ function checkZip() {
         return false;
     }
 
-    var letters = /[a-zA-Z]/g
-    if (!zip.value[4].match(letters) || !zip.value[5].match(letters)) {
-        zipMes.innerHTML = "Please enter a valid zipcode";
-        zipMes.style.color = "#D7263D";
-        zip.style.borderColor = "#D7263D";
-        zip.style.borderWidth = "2px";
-        return false;
+
+    var ul = "1234567890";
+    var check = 0;
+    for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < ul.length; j++) {
+            if (zip.value.charAt(i) == ul.charAt(j)) {
+                check = 1;
+                break;
+            } else {
+                check = 0;
+
+            }
+
+        }
+        if (check == 0) {
+            var re2 = "Please enter a valid zipcode";
+            zipMes.innerHTML = re2;
+            zipMes.style.color = "#D7263D";
+            zip.style.borderColor = "#D7263D";
+            zip.style.borderWidth = "2px";
+            return false;
+        }
     }
-    var numbers = /[0-9]/g
-    if (!zip.value[2].match(numbers) || !zip.value[3].match(numbers) || !zip.value[0].match(numbers) || !zip.value[1].match(numbers)) {
-        zipMes.innerHTML = "Please enter a valid zipcode";
-        zipMes.style.color = "#D7263D";
-        zip.style.borderColor = "#D7263D";
-        zip.style.borderWidth = "2px";
-        return false;
+
+    var ul = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm";
+    for (let i = 4; i < 6; i++) {
+        for (let j = 0; j < ul.length; j++) {
+            if (zip.value.charAt(i) == ul.charAt(j)) {
+                check = 1;
+                break;
+            } else {
+                check = 0;
+            }
+
+        }
+        if (check == 0) {
+            var re2 = "Please enter a valid zipcode";
+            zipMes.innerHTML = re2;
+            zipMes.style.color = "#D7263D";
+            zip.style.borderColor = "#D7263D";
+            zip.style.borderWidth = "2px";
+            return false;
+        }
     }
 
     zipMes.innerHTML = "Good!";
@@ -227,6 +384,61 @@ function checkZip() {
 function checkEmail() {
     if (email.value == "") {
         emailMes.innerHTML = "Required";
+        emailMes.style.color = "#D7263D";
+        email.style.borderColor = "#D7263D";
+        email.style.borderWidth = "2px";
+        return false;
+    }
+
+    var matches = 0;
+    var position = 0;
+    var atSign = "@";
+    for (let i = 1; i < email.value.length; i++) {
+        if (email.value.charAt(i) == atSign.charAt(0)) {
+            matches = 1;
+            position = i;
+            break;
+        }
+    }
+
+
+    if (matches == 0) {
+        var re2 = "Please enter a valid email";
+        emailMes.innerHTML = re2;
+        emailMes.style.color = "#D7263D";
+        email.style.borderColor = "#D7263D";
+        email.style.borderWidth = "2px";
+        return false;
+    }
+
+    var position2 = 0;
+    var dot = ".";
+    for (let i = position + 1; i < email.value.length; i++) {
+        if (email.value.charAt(i) == dot.charAt(0)) {
+            position2 = i;
+            matches = 0;
+            break;
+        }
+    }
+
+
+    if (matches == 1) {
+        var re2 = "Please enter a valid email";
+        emailMes.innerHTML = re2;
+        emailMes.style.color = "#D7263D";
+        email.style.borderColor = "#D7263D";
+        email.style.borderWidth = "2px";
+        return false;
+    }
+
+    if (!(email.value.length == position2 + 1)) {
+        matches = 1;
+    }
+
+
+    if (matches == 0) {
+        var re2 = "Please enter a valid email";
+        emailMes.innerHTML = re2;
         emailMes.style.color = "#D7263D";
         email.style.borderColor = "#D7263D";
         email.style.borderWidth = "2px";
