@@ -435,4 +435,31 @@ a:hover{
 
 .labelMes{
     font-size: 10px;
+    position: relative;
+    visibility: hidden;
+
+    margin: -27px;
+}
+
+.tfield:valid{
+    border-width: 2px;
+    border-color: #436436;
+}
+
+.tfield:invalid{
+    border-width: 2px;
+    border-color: #D7263D;
+}
+
+.tfield:invalid + .labelMes{
+    color:  #D7263D;
+    visibility: visible;
+}
+
+#adMes{
+    visibility: visible;
+}
+
+#aboutMes{
+    visibility: visible;
 }

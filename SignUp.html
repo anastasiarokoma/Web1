@@ -26,8 +26,8 @@
             <div class="question">
 
                 <label class="label" for="username">Username:</label>
-                <input id="signUsername" type="text" class="tfield" name="username">
-                <label id="userMes" class="labelMes" for="username"></label>
+                <input id="signUsername" type="text" class="tfield" name="username" required minlength="5" maxlength="12">
+                <label class="labelMes" for="username">Required (5-12 characters)</label>
 
             </div>
 
@@ -35,8 +35,8 @@
             <div class="question">
 
                 <label class="label" for="password">Password:</label>
-                <input id="signPassword" type="text" class="tfield" name="password">
-                <label id="passMes" class="labelMes" for="username"></label>
+                <input id="signPassword" type="text" class="tfield" name="password" required minlength="12">
+                <label id="passMes" class="labelMes" for="username">Required (12+ characters)</label>
 
             </div>
 
@@ -44,8 +44,8 @@
             <div class="question">
 
                 <label class="label" for="name">Name:</label>
-                <input id="signName" type="text" class="tfield" name="name">
-                <label id="nameMes" class="labelMes" for="username"></label>
+                <input id="signName" type="text" class="tfield" name="name" required>
+                <label id="nameMes" class="labelMes" for="username">Required</label>
 
             </div>
 
@@ -54,7 +54,7 @@
 
                 <label class="label" for="adress">Adress:</label>
                 <input id="signAdress" type="text" class="tfield" name="adress">
-                <label id="adMes" class="labelMes" for="username"></label>
+                <label id="adMes" class="labelMes" for="username">Optional</label>
 
             </div>
 
@@ -62,14 +62,14 @@
             <div class="question">
 
                 <label class="label" for="country">Country:</label>
-                <select id="signCountry" class="tfield" name="country">
+                <select id="signCountry" class="tfield" name="country" required>
                     <option value=""></option>
                     <option value="Netherlands">Netherlands</option>
                     <option value="Germany">Germany</option>
                     <option value="France">France</option>
                     <option value="Mordor">Mordor</option>
                 </select>
-                <label id="countryMes" class="labelMes" for="username"></label>
+                <label id="countryMes" class="labelMes" for="username">Required</label>
 
             </div>
 
@@ -77,8 +77,8 @@
             <div class="question">
 
                 <label class="label" for="zip">Zip code:</label>
-                <input id="signZip" type="text" class="tfield" name="zip">
-                <label id="zipMes" class="labelMes" for="username"></label>
+                <input id="signZip" type="text" class="tfield" name="zip" required minlength="6" maxlength="6">
+                <label id="zipMes" class="labelMes" for="username">Please enter a valid ZIP</label>
 
             </div>
 
@@ -86,8 +86,8 @@
             <div class="question">
 
                 <label class="label" for="Email">Email:</label>
-                <input id="signEmail" type="text" class="tfield" name="Email">
-                <label id="emailMes" class="labelMes" for="username"></label>
+                <input id="signEmail" type="text" class="tfield" name="Email" required>
+                <label id="emailMes" class="labelMes" for="username">Required</label>
 
             </div>
 
@@ -95,8 +95,8 @@
             <div class="question">
 
                 <label class="label" for="sex">Sex:</label>
-                <input id="signSex" type="text" class="tfield" name="sex">
-                <label id="sexMes" class="labelMes" for="username"></label>
+                <input id="signSex" type="text" class="tfield" name="sex" required>
+                <label id="sexMes" class="labelMes" for="username">Required</label>
 
             </div>
 
@@ -104,7 +104,7 @@
             <div class="question">
 
                 <label class="label" for="country">Language:</label>
-                <select id="signLanguage" type="text" class="tfield" name="language">
+                <select id="signLanguage" type="text" class="tfield" name="language" required>
                     <option value=""></option>
                     <option value="Dutch">Dutch</option>
                     <option value="English">English</option>
@@ -112,7 +112,7 @@
                     <option value="German">German</option>
                     <option value="Quenya">Quenya</option>
                 </select>
-                <label id="languageMes" class="labelMes" for="username"></label>
+                <label id="languageMes" class="labelMes" for="username">Required</label>
 
             </div>
 
@@ -121,7 +121,7 @@
 
                 <label class="label" for="about">About:</label>
                 <input id="signAbout" type="text" class="tfield" name="about">
-                <label id="aboutMes" class="labelMes" for="username"></label>
+                <label id="aboutMes" class="labelMes" for="username">Optional</label>
 
             </div>
             
@@ -130,7 +130,5 @@
         <button class="submit" onclick="check()">Submit</button>
     </div>
 </body>
-
-<script src="Signup.js"></script>
 
 </html>
